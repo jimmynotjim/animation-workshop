@@ -77,100 +77,189 @@
     <div class="content_bar"></div>
     <div class="content_wrapper">
         <div class="content_main">
-            <div class="feature-list">
+            <p class="block u-mt0 intro-message">
+                This demo page will allow you to test your animations live in a local browser.
+            </p>
 
-                <p class="block u-mt0 intro-message">
-                    This demo page will allow you to test your animations live in a local browser.
-                </p>
+            <section class="block">
 
-                <section class="feature-list_item block">
+                <div class="lesson-header">
+                    <h2 class="h1 lesson-header_name">Animating with CSS Transitions</h2>
+                </div>
 
-                    <div class="feature-header">
-                        <h2 class="h1 feature-header_name">Animating with CSS Transitions</h2>
+                <div class="block block__sub u-mt0">
+                    <h3>Animate a background color</h3>
+                    <p>
+                        <a class="btn">Example Button</a>
+                    </p>
+                </div>
+
+                <div class="block block__sub">
+                    <h3>Animate an icon</h3>
+                    <p>
+                        <span class="cf-icon cf-icon-update"></span>
+                    </p>
+                </div>
+
+                <div class="block block__sub">
+                    <h3>Animate a drop down menu</h3>
+                    <div class="dropdown">
+                        <input type="checkbox" id="dropdown-css">
+                        <label class="dropdown_label" for="dropdown-css">
+                            Dropdown label
+                        </label>
+                        <ul class="list_clean
+                                   dropdown_list
+                                   dropdown_list__css">
+                            <li class="dropdown_item">
+                                Dropdown item 1
+                            </li>
+                            <li class="dropdown_item">
+                                Dropdown item 2
+                            </li>
+                            <li class="dropdown_item">
+                                Dropdown item 3
+                            </li>
+                            <li class="dropdown_item">
+                                Dropdown item 4
+                            </li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="block block__sub u-mt0">
-                        <h3>Animate a background color</h3>
+                <div class="block block__sub">
+                    <h3>Animate an off-screen menu</h3>
+                    <div class="offscreen-menu">
+                        <input type="checkbox" id="offscreen-css">
+                        <label class="offscreen-label" for="offscreen-css">
+                            <a class="btn offscreen-menu_btn">
+                                Menu
+                            </a>
+                        </label>
+                        <ul class="list_clean
+                                   offscreen-menu_list
+                                   offscreen-menu_list__css">
+                            <li class="offscreen-menu_item">
+                                Offscreen item 1
+                            </li>
+                            <li class="offscreen-menu_item">
+                                Offscreen item 2
+                            </li>
+                            <li class="offscreen-menu_item">
+                                Offscreen item 3
+                            </li>
+                            <li class="offscreen-menu_item">
+                                Offscreen item 4
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="block block__sub">
+                    <h3>Animate a tooltip</h3>
+                    <div class="tooltip">
                         <p>
-                            <a class="btn">Example Button</a>
+                            This is a bit of text with some other
+                            <span class="tooltip_keyword"
+                                  data-description="This is the best tooltip ever.">
+                            text to define</span>
+                            inside of it.
                         </p>
                     </div>
+                </div>
 
-                    <div class="block block__sub">
-                        <h3>Animate an icon</h3>
-                        <p>
-                            <span class="cf-icon cf-icon-update"></span>
-                        </p>
+            </section>
+
+            <section class="block block__padded-top block__border-top">
+
+                <div class="lesson-header">
+                    <h2 class="h1 lesson-header_name">Animating with CSS Keyframe</h2>
+                </div>
+
+            </section>
+
+            <section class="block block__padded-top block__border-top">
+
+                <div class="lesson-header">
+                    <h2 class="h1 lesson-header_name">Animating with SVG</h2>
+                </div>
+
+                <div class="block block__sub">
+                    <h3>Animate a loading image</h3>
+                    <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="200px" height="100px" fill="#5bc0de">
+                      <circle transform="translate(8 0)" cx="0" cy="16" r="0">
+                        <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0"
+                          keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline" />
+                      </circle>
+                      <circle transform="translate(16 0)" cx="0" cy="16" r="0">
+                        <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0.3"
+                          keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline" />
+                      </circle>
+                      <circle transform="translate(24 0)" cx="0" cy="16" r="0">
+                        <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0.6"
+                          keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline" />
+                      </circle>
+                    </svg>
+                    </p>
+                </div>
+
+            </section>
+
+            <section class="block block__padded-top block__border-top">
+
+                <div class="lesson-header">
+                    <h2 class="h1 lesson-header_name">Animating with JS</h2>
+                </div>
+
+                <div class="block block__sub">
+                    <h3>Animate a drop down menu</h3>
+                    <div class="dropdown">
+                        <input type="checkbox" id="dropdown-js">
+                        <label class="dropdown_label" for="dropdown-js">
+                            Dropdown label
+                        </label>
+                        <ul class="list_clean
+                                   dropdown_list
+                                   dropdown_list__js">
+                            <li class="dropdown_item">Dropdown item 1</li>
+                            <li class="dropdown_item">Dropdown item 2</li>
+                            <li class="dropdown_item">Dropdown item 3</li>
+                            <li class="dropdown_item">Dropdown item 4</li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="block block__sub">
-                        <h3>Animate a drop down menu</h3>
-                        <p>
-                            <div>
-                                <span>Dropdown title</span>
-                                <ul>
-                                    <li>Dropdown item 1</li>
-                                    <li>Dropdown item 2</li>
-                                    <li>Dropdown item 3</li>
-                                    <li>Dropdown item 4</li>
-                                </ul>
-                            </div>
-                        </p>
+                <div class="block block__sub">
+                    <h3>Animate an off-screen menu</h3>
+                    <div class="offscreen-menu">
+                        <input type="checkbox" id="offscreen-js">
+                        <label class="offscreen-label" for="offscreen-js">
+                            <a class="btn offscreen-menu_btn">
+                                Menu
+                            </a>
+                        </label>
+                        <ul class="list_clean
+                                   offscreen-menu_list
+                                   offscreen-menu_list__js">
+                            <li class="offscreen-menu_item">
+                                Offscreen item 1
+                            </li>
+                            <li class="offscreen-menu_item">
+                                Offscreen item 2
+                            </li>
+                            <li class="offscreen-menu_item">
+                                Offscreen item 3
+                            </li>
+                            <li class="offscreen-menu_item">
+                                Offscreen item 4
+                            </li>
+                        </ul>
                     </div>
+                </div>
 
-                    <div class="block block__sub">
-                        <h3>Animate an off-screen menu</h3>
-                        <p>
-                        </p>
-                    </div>
+            </section>
 
-                </section>
-
-                <section class="feature-list_item block block__padded-top block__border-top">
-
-                    <div class="feature-header">
-                        <h2 class="h1 feature-header_name">Animating with CSS Keyframe</h2>
-                    </div>
-
-                </section>
-
-                <section class="feature-list_item block block__padded-top block__border-top">
-
-                    <div class="feature-header">
-                        <h2 class="h1 feature-header_name">Animating with SVG</h2>
-                    </div>
-
-                    <div class="block block__sub">
-                        <h3>Animate a loading image</h3>
-                        <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="200px" height="100px" fill="#5bc0de">
-                          <circle transform="translate(8 0)" cx="0" cy="16" r="0">
-                            <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0"
-                              keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline" />
-                          </circle>
-                          <circle transform="translate(16 0)" cx="0" cy="16" r="0">
-                            <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0.3"
-                              keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline" />
-                          </circle>
-                          <circle transform="translate(24 0)" cx="0" cy="16" r="0">
-                            <animate attributeName="r" values="0; 4; 0; 0" dur="1.2s" repeatCount="indefinite" begin="0.6"
-                              keytimes="0;0.2;0.7;1" keySplines="0.2 0.2 0.4 0.8;0.2 0.6 0.4 0.8;0.2 0.6 0.4 0.8" calcMode="spline" />
-                          </circle>
-                        </svg>
-                        </p>
-                    </div>
-
-                </section>
-
-                <section class="feature-list_item block block__padded-top block__border-top">
-
-                    <div class="feature-header">
-                        <h2 class="h1 feature-header_name">Animating with JS</h2>
-                    </div>
-
-                </section>
-
-            </div><!-- END .feature-list -->
         </div><!-- END .content_main -->
     </div>
 </main>

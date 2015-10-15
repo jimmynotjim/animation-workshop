@@ -1,5 +1,3 @@
 'use strict';
 
-( function( $ ) {
-  console.log( 'Enter your scripting here' );
-} )( jQuery );
+// General scripts go here

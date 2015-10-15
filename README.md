@@ -19,9 +19,9 @@ A workshop covering the ins-and-outs of UI animation.
 ## Installation
 
 1. Install [Node.js](http://nodejs.org) however you'd like.
-2. Install [Gulp](http://gulpjs.com) and [Bower](http://bower.io):
+2. Install [Gulp](http://gulpjs.com), [Bower](http://bower.io), and [HTTP-Server](https://github.com/indexzero/http-server) globally:
   ```bash
-  npm install -g gulp bower
+  npm install -g gulp bower http-server
   ```
 3. Next, install the dependencies and compile the project with:
   ```bash
@@ -31,16 +31,18 @@ A workshop covering the ins-and-outs of UI animation.
   `./setup.sh` again. See the [usage](#usage) section on updating all the
   project dependencies.
 
-## Configuration
-
-_If the software is configurable, describe it in detail,
-either here or in other documentation to which you link._
 
 ## Usage
 
 Each time you fetch from the upstream repository (this repo), run `./setup.sh`.
 This setup script will remove and re-install the project dependencies and
 rebuild the site's JavaScript and CSS assets.
+
+To start a server to view you changes locally run:
+
+```bash
+./runserver.sh
+```
 
 To watch for changes in the source code and automatically update the running site,
 open a terminal and run:
@@ -49,21 +51,17 @@ open a terminal and run:
 gulp watch
 ```
 
-## How to test the software
+To edit the page for your animations visit:
 
-After running `./setup.sh` or compiling with Gulp,
-you can view the site in a browser by opening `/dist/index.html`.
-Alternatively, you may want to use a local server with something like
-`python -m SimpleHTTPServer`.
+- __html:__ `/src/index.html`
+- __css:__ `/src/static/css/animations.less`
+- __js:__ `/src/static/js/animations.js`
 
 ## Known issues
 
-_Document any known significant shortcomings with the software._
+None yet, but it's still early...
 
 ## Getting help
-
-_Instruct users how to get help with this software; this might include links
-to an issue tracker, wiki, mailing list, etc._
 
 Use the issue tracker to follow the development conversation.
 If you find a bug not listed in the issue tracker, please file a bug report.
@@ -91,7 +89,4 @@ which is the front-end pattern library used in this project.
 
 ## Credits and references
 
-1. Projects that inspired you
-2. Related projects
-3. Books, papers, talks, or other sources that have meaniginful impact or
-   influence on this project
+...
