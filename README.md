@@ -20,13 +20,17 @@ A workshop covering the ins-and-outs of UI animation.
 
 1. Install [Node.js](http://nodejs.org) however you'd like.
 2. Install [Gulp](http://gulpjs.com), [Bower](http://bower.io), and [HTTP-Server](https://github.com/indexzero/http-server) globally:
+
   ```bash
   npm install -g gulp bower http-server
   ```
+
 3. Next, install the dependencies and compile the project with:
+
   ```bash
   ./setup.sh
   ```
+
   __NOTE:__ To re-install and rebuild all the site’s assets run
   `./setup.sh` again. See the [usage](#usage) section on updating all the
   project dependencies.
