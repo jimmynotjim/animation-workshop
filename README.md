@@ -25,7 +25,7 @@ A workshop covering the ins-and-outs of UI animation.
   npm install -g gulp bower http-server
   ```
 
-3. Next, install the dependencies and compile the project with:
+3. Next, from within the project root (ex. `/myprojects/animation-workshop`), install the dependencies and compile the project with:
 
   ```bash
   ./setup.sh
@@ -42,18 +42,23 @@ Each time you fetch from the upstream repository (this repo), run `./setup.sh`.
 This setup script will remove and re-install the project dependencies and
 rebuild the site's JavaScript and CSS assets.
 
-To start a server to view you changes locally run:
+To start a server to view you changes locally run in one terminal tab:
 
 ```bash
 ./runserver.sh
 ```
 
+This will open a browser tab/window pointing at `localhost:8000`.
+
+
 To watch for changes in the source code and automatically update the running site,
-open a terminal and run:
+open a terminal and run in another terminal tab:
 
 ```bash
 gulp watch
 ```
+
+This will open a browser tab/window pointing at `localhost:3000`. Be sure you're at this url if you expect to see changes updated live.
 
 To edit the page for your animations visit:
 
