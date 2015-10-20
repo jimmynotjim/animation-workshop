@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+
+<head>
+
+<!--
+    ===========
+    GLOBAL META
+    ===========
+-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+    ==================
+    PAGE-SPECIFIC META
+    ==================
+-->
+
+    <title>CFPB UI Animation Workshop</title>
+    <meta name="description" content="A workshop covering the ins-and-outs of UI animation.">
+
+<!--
+    ======
+    STYLES
+    ======
+    The number of stylesheets here must be kept to a minimum.
+    Unless adding a significant amount of CSS that is specific to a single page
+    or section of the site, all new styles should be added to src/static/css/app.less.
+-->
+
+<!--[if lt IE 9]>      <link rel="stylesheet" href="/static/css/main.ie.min.css"> <![endif]-->
+<!--[if gt IE 8]><!--> <link rel="stylesheet" href="/static/css/main.min.css"> <!--<![endif]-->
+
+<!--
+    ============
+    HEAD SCRIPTS
+    ============
+    The following scripts must be included in the head. DO NOT ADD ANY MORE.
+    All other scripts should go before the closing body tag.
+    If you come across a script that makes a convincing case to be included in
+    the head, then file an issue or PR to discuss including it.
+-->
+
+<!--[if lt IE 9]>
+    <script src="/static/vendor/html5shiv/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+
+    <script>
+        // Confirm availability of JS and remove no-js class from html
+        var docElement = document.documentElement;
+        docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+    </script>
+
+</head>
+
+<body class="slideshow">
+
+  <header class="wrapper wrapper__match-content site_header" role="banner">
+    <h1 class="site_heading">Animating your UI</h1>
+    <a class="site_logo"
+       href="http://www.consumerfinance.gov">
+      <img class="logo"
+           src="/static/img/logo_210.png"
+           alt="Consumer Financial Protection Bureau">
+    </a>
+  </header>
+  <main class="content" id="main" role="main">
+    <div class="content_bar"></div>
+
+    <div class="slide-wrapper">
+      <div class="slides">
+
+        <input class="slide_input" type="checkbox" id="chkbx_title" checked>
+        <label class="slide_label" for="chkbx_title"><span>Animating your UI</span></label>
+        <div class="slide slide__intro">
+          <header class="slide_header">
+            <h2 class="slide_heading">Animating your UI</h2>
+          </header>
+          <div class="slide_content">
+            <p class="h3 ">Jimmy Wilson, Chris Contolini, <br>and George Kokkinidis</p>
+            <p>https://github.com/jimmynotjim/animation-workshop</p>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_title_real">
+        <label class="slide_label" for="chkbx_title_real"><span>Or really</span></label>
+        <div class="slide slide__intro">
+          <header class="slide_header">
+            <h2 class="slide_heading">Or more accurately</h2>
+          </header>
+          <div class="slide_content">
+            <p class="h3">Please oh please, don't let me puke in front of my colleagues</p>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_why">
+        <label class="slide_label" for="chkbx_why"><span>Why Animation?</span></label>
+        <div class="slide intro">
+          <header class="slide_header">
+            <h2 class="slide_heading">Why Use Animation?</h2>
+          </header>
+          <div class="slide_content">
+            <ul contenteditable>
+              <li class="slide_point">Delight our users</li>
+              <li class="slide_point">Enhance the experience</li>
+              <li class="slide_point">Give extra context to our interface</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_really">
+        <label class="slide_label" for="chkbx_really"><span>But Really</span></label>
+        <div class="slide intro">
+          <header class="slide_header">
+            <h2 class="slide_heading">But Really</h2>
+          </header>
+          <div class="slide_content">
+            <ul contenteditable>
+              <li class="slide_point">Give extra context to our interface</li>
+              <li class="slide_point">Enhance the experience</li>
+              <li class="slide_point">Delight our users</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_good_properties">
+        <label class="slide_label" for="chkbx_good_properties"><span>Good Animation Properties</span></label>
+        <div class="slide intro">
+          <header class="slide_header">
+            <h2 class="slide_heading">Properties of Good Animations</h2>
+          </header>
+          <div class="slide_content">
+            <ul contenteditable>
+              <li class="slide_point">invisible to the user</li>
+              <li class="slide_point">responsive as we are</li>
+              <li class="slide_point">provide feedback to user input</li>
+              <li class="slide_point">inform what's happening before, during, and after a state change</li>
+              <li class="slide_piont">soften out the rough spots in-between</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_real_world">
+        <label class="slide_label" for="chkbx_real_world"><span>Real World</span></label>
+        <div class="slide intro">
+          <header class="slide_header">
+            <h2 class="slide_heading">Things are not as they seem</h2>
+          </header>
+          <div class="slide_content">
+            <ul contenteditable>
+              <li class="slide_point">state changes in real world objects appear instant</li>
+              <li class="slide_point">there's always a transition between two states</li>
+              <li class="slide_point">nearly ever action has some kind of reaction</li>
+              <li class="slide_point">combined, these provide feedback that help guide us through the real world</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_light_switch">
+        <label class="slide_label" for="chkbx_light_switch"><span>Light & Switch</span></label>
+        <div class="slide intro">
+          <header class="slide_header">
+            <h2 class="slide_heading">Light & Switch</h2>
+          </header>
+          <div class="slide_content">
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_menu_button" checked>
+        <label class="slide_label" for="chkbx_menu_button"><span>Menu & Button</span></label>
+        <div class="slide intro">
+          <header class="slide_header">
+          <h2 class="slide_heading">
+            <span style="text-decoration: line-through;">Light & Switch</span>
+            <br>Menu & Button
+          </h2>
+          </header>
+          <div class="slide_content">
+            <ul contenteditable>
+              <li class="slide_point"></li>
+            </ul>
+          </div>
+        </div>
+
+<!--
+        <input class="slide_input" type="checkbox" id="chkbx_lightswitch_example">
+        <label class="slide_label" for="chkbx_lightswitch_example"><span>Lightswitch Example</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">Lightswitch Example</h2>
+          </header>
+          <figure class="slide_example">
+            <object data="partials/lightswitch_example.html"></object>
+          </figure>
+        </div>
+-->
+
+        <input class="slide_input" type="checkbox" id="chkbx_using_js">
+        <label class="slide_label" for="chkbx_using_js"><span>Using CSS</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">Using JS</h2>
+          </header>
+          <div class="slide_content">
+            <p>For a long time, libraries like jQuery were the only answer</p>
+            <ul>
+              <li class="slide_point">.fadeIn(), .fadeOut()</li>
+              <li class="slide_point">.slideUp(), .slideDown(), .slideToggle()</li>
+              <li class="slide_point">.show(), .hide(), .toggle()</li>
+              <li class="slide_point">.animate()</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_using_css">
+        <label class="slide_label" for="chkbx_using_css"><span>Using CSS</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">Using CSS</h2>
+          </header>
+          <div class="slide_content">
+            <p>Ninety percent of our animations can be accomplished with CSS</p>
+            <ul>
+              <li class="slide_point">CSS Transitions</li>
+              <li class="slide_point">CSS Animations</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_transitions">
+        <label class="slide_label" for="chkbx_transitions"><span>CSS Transitions</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Transitions</h2>
+          </header>
+          <div class="slide_content">
+            <p>Inform the browser how an element changes state</p>
+            <ul>
+              <li class="slide_point">Property: background, size, location, etc</li>
+              <li class="slide_point">Duration: number in seconds or miliseconds</li>
+              <li class="slide_point">Timing Function: either pre-formatted easings or a bezier curve</li>
+              <li class="slide_point">Delay: how long the browser should wait to start the transition</li>
+            </ul>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_transitions_longhand">
+        <label class="slide_label" for="chkbx_transitions_longhand"><span>CSS Transitions: Longhand</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Transitions: Longhand</h2>
+          </header>
+          <div class="slide_content">
+<pre contenteditable class="slide_editor">
+.btn {
+  transition-property: background;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+  transition-delay: 0.1s;
+}
+</pre>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_transitions_shorthand">
+        <label class="slide_label" for="chkbx_transitions_shorthand"><span>CSS Transitions: Shorthand</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Transitions: Shorthand</h2>
+          </header>
+          <figure class="slide_example">
+            <object data="partials/transition_shorthand.html"></object>
+          </figure>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_transitions_height">
+        <label class="slide_label" for="chkbx_transitions_height"><span>CSS Transitions: Height</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Transitions: Height</h2>
+          </header>
+          <figure class="slide_example">
+            <object data="partials/transition_height.html"></object>
+          </figure>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_transitions_pitfalls">
+        <label class="slide_label" for="chkbx_transitions_pitfalls"><span>CSS Transitions: Pitfalls</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Transitions: Pitfalls</h2>
+          </header>
+          <div class="slide_content">
+            <p>
+              <ul>
+                <li class="slide_point">Not every property is animatable</li>
+                <li class="slide_point">Not every value is animatable</li>
+                <li class="slide_point">Some properties and value changes can be delayed with an animation despite not being animatable</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_transitions_maxheight" checked>
+        <label class="slide_label" for="chkbx_transitions_maxheight"><span>CSS Transitions: Height</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Transitions: Height</h2>
+          </header>
+          <figure class="slide_example">
+            <object data="partials/transition_height.html"></object>
+          </figure>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_transitions_timing">
+        <label class="slide_label" for="chkbx_transitions_timing"><span>CSS Transitions: Timing</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Transitions: Timing</h2>
+          </header>
+          <div class="slide_content">
+            <p>Timing Function gives our animations an organic feel</p>
+              <ul>
+                <li class="slide_point" style="transition-delay:0s;">ease</li>
+                <li class="slide_point" style="transition-delay:0s;">ease-in</li>
+                <li class="slide_point" style="transition-delay:0s;">ease-out</li>
+                <li class="slide_point" style="transition-delay:0s;">ease-in-out</li>
+                <li class="slide_point" style="transition-delay:0s;">linear</li>
+                <li class="slide_point" style="transition-delay:0s;">bezier-curve</li>
+              </ul>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_transitions_timing_example">
+        <label class="slide_label" for="chkbx_transitions_timing_example"><span>CSS Transitions: Timing</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Transitions: Timing</h2>
+          </header>
+          <div class="slide_content">
+            <p>Timing Function gives our animations an organic feel</p>
+              <ul>
+                <li class="slide_point" style="transition-timing-function: ease;transition-delay:0s;">ease</li>
+                <li class="slide_point" style="transition-timing-function: ease-in;transition-delay:0s;">ease-in</li>
+                <li class="slide_point" style="transition-timing-function: ease-out;transition-delay:0s;">ease-out</li>
+                <li class="slide_point" style="transition-timing-function: ease-in-out;transition-delay:0s;">ease-in-out</li>
+                <li class="slide_point" style="transition-timing-function: linear;transition-delay:0s;">linear</li>
+                <li class="slide_point" style="transition-timing-function: cubic-bezier(0,.88,1,.12);transition-delay:0s;">bezier-curve</li>
+              </ul>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_transitions_delay">
+        <label class="slide_label" for="chkbx_transitions_delay"><span>CSS Transitions: Delay</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Transitions: Delay</h2>
+          </header>
+          <div class="slide_content">
+            <p>Delays are useful for secondary effects</p>
+<pre contenteditable class="slide_editor">
+.slide {
+  transition: all 0.4s ease-out;
+}
+.slide li {
+    transition: transform 0.5s ease-out;
+}
+
+.slide li:nth-of-type(1) {
+  transition-delay: 0.1s;
+}
+
+.slide li:nth-of-type(2) {
+  transition-delay: 0.2s;
+}
+etc.</pre>
+          </div>
+        </div>
+
+        <input class="slide_input" type="checkbox" id="chkbx_transitions_delay_example">
+        <label class="slide_label" for="chkbx_transitions_delay_example"><span>CSS Transitions: Delay</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Transitions: Delay</h2>
+          </header>
+          <div class="slide_content">
+            <p>Delays are useful for secondary effects</p>
+              <ul>
+                <li class="slide_point" style="transition-timing-function: linear;">delay: 0.1s</li>
+                <li class="slide_point" style="transition-timing-function: linear;">delay: 0.2s</li>
+                <li class="slide_point" style="transition-timing-function: linear;">delay: 0.3s</li>
+                <li class="slide_point" style="transition-timing-function: linear;">delay: 0.4s</li>
+                <li class="slide_point" style="transition-timing-function: linear;">delay: 0.5s</li>
+                <li class="slide_point" style="transition-timing-function: linear;">delay: 0.6s</li>
+              </ul>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_transitions_limitations">
+        <label class="slide_label" for="chkbx_transitions_limitations"><span>CSS Transitions: Limitations</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Transitions: Limitations</h2>
+          </header>
+          <div class="slide_content">
+            <p></p>
+              <ul>
+                <li class="slide_point">states are binary</li>
+                <li class="slide_point">can only be presented once</li>
+                <li class="slide_point">not really reusable</li>
+              </ul>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_animations">
+        <label class="slide_label" for="chkbx_animations"><span>CSS Animations</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Animations</h2>
+          </header>
+          <div class="slide_content">
+            <ul>
+              <li class="slide_point">@keyframes: define a reusable animation sequence</li>
+              <li class="slide_point">Duration: number in seconds or miliseconds</li>
+              <li class="slide_point">Timing Function: either pre-formatted easings or a bezier curve</li>
+              <li class="slide_point">Delay: how long the browser should wait to start the transition</li>            </ul>
+          </div>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_animations_keyframes">
+        <label class="slide_label" for="chkbx_animations_keyframes"><span>CSS Animations: Keyframes</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Animations: Keyframes</h2>
+          </header>
+          <div class="slide_content">
+<pre contenteditable class="slide_editor">
+@keyframe rotate {
+  0% {
+    transform: translateZ(0deg);
+  }
+
+  100% {
+    transform: translateZ(360deg);
+  }
+}</pre>
+          </div>
+        </div>
+
+        <input class="slide_input" type="checkbox" id="chkbx_animations_rotate" checked>
+        <label class="slide_label" for="chkbx_animations_rotate"><span>CSS Animations: Keyframes</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Animations: Rotate</h2>
+          </header>
+          <figure class="slide_example">
+            <object data="partials/animation_rotate.html"></object>
+          </figure>
+        </div>
+
+        <input class="slide_input" type="checkbox" id="chkbx_animations_shake">
+        <label class="slide_label" for="chkbx_animations_shake"><span>CSS Animations: Shake</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">CSS Animations: Shake</h2>
+          </header>
+          <figure class="slide_example">
+            <object data="partials/animation_shake.html"></object>
+          </figure>
+        </div>
+
+
+        <input class="slide_input" type="checkbox" id="chkbx_combined" checked>
+        <label class="slide_label" for="chkbx_combined"><span>Combine These</span></label>
+        <div class="slide normal">
+          <header class="slide_header">
+            <h2 class="slide_heading">Let's Combine These</h2>
+          </header>
+          <figure class="slide_example">
+            <object data="partials/combined.html"></object>
+          </figure>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- footer instructions -->
+  <div class="info">
+      <p>
+        <a href="http://github.com/jimmynotjim/animation-workshop">UI and SVG Animations</a>
+      </p>
+  </div>
+
+<!--
+    ============
+    BODY SCRIPTS
+    ============
+    The number of scripts here must be kept to a minimum.
+    Unless adding a significant amount of JS that is specific to a single page
+    or section of the site, all custom JS should be added to src/static/js/app.js.
+-->
+
+<script src="/static/js/main.min.js"></script>
+
+</body>
+
+</html>

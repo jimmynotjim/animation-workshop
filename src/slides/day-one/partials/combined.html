@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Combined</title>
+  <link rel="stylesheet" href="/static/css/partials.min.css">
+
+<style contenteditable class="editor">@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+input:not(:checked) + label .btn:hover:after {
+  animation-name: rotate;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.btn:after {
+  transition: all 0.2s ease-in;
+}
+
+.combined_notification {
+  transition: transform 0.2s ease-in;
+}</style>
+
+</head>
+
+<body class="example">
+
+    <h3>Animate an off-screen menu</h3>
+    <div class="combined">
+        <input type="checkbox" id="offscreen-css">
+        <label class="offscreen-label" for="offscreen-css">
+            <a class="btn combined_btn">
+                Submit
+            </a>
+        </label>
+        <div class="combined_notification">
+          <span>We successfully received your request</span>
+        </div>
+    </div>
+
+</body>
+</html>

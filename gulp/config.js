@@ -41,6 +41,7 @@ module.exports = {
   styles: {
     cwd:      loc.src + '/static/css',
     src:      '/main.less',
+    partials: '/partials.less',
     dest:     loc.dist + '/static/css',
     settings: {
       paths: [

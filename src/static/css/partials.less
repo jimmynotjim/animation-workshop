@@ -1,0 +1,119 @@
+// Import Capital Framework.
+@import (less) "../../vendor/capital-framework/src/capital-framework.less";
+
+// Import the brand color palette.
+@import (less) "brand-palette.less";
+
+// Uncomment to import Avenir font on CFPB projects.
+// If this project is on a non-CFPB domain,
+// use this file as a template for adding web fonts.
+@import (less) 'licensed-fonts.css';
+
+// Override the Capital Framework theme variables with colors from the brand color palette.
+@import (less) "cf-theme-overrides.less";
+
+// Import the Capital Framework enhancements
+@import (less) "cf-enhancements.less";
+
+[contenteditable] {
+  -webkit-user-modify: read-write-plaintext-only;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+head {
+  display: block;
+}
+
+.editor {
+  font-size: 1.5em;
+  background-color: #333;
+  color: white;
+  white-space: pre;
+  display: block;
+  padding: 15px 20px;
+  font-family: monospace;
+  -webkit-user-modify: read-write-plaintext-only;
+  -webkit-user-modify: read-write;
+  -moz-user-modify: read-write;
+  user-modify: read-write;
+  width: 45%;
+  float: left;
+  overflow-x: scroll;
+  height: 70vh;
+  position: relative;
+}
+
+.example {
+  font-size: 1.4em;
+  margin: 0;
+  padding: 15px;
+  float: right;
+  width: 45%;
+}
+
+.list_clean {
+  padding-left: initial;
+  margin-bottom: initial;
+
+  list-style: none;
+}
+
+.combined {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 70vh;
+  width: 100%;
+
+  input {
+    display: none;
+
+    + label .btn:after {
+      .cf-icon();
+
+      display: inline-block;
+      margin-left: 0.4em;
+      content: @cf-icon-right;
+      width: 1em;
+      text-align: center;
+    }
+
+    + label .btn:hover {
+      color: #fff;
+
+      &:after {
+        content: @cf-icon-update;
+      }
+    }
+
+    &:checked + label .btn {
+      background-color: @green;
+
+      &:after {
+        content: @cf-icon-approved;
+      }
+    }
+
+    &:checked + label + .combined_notification {
+      transform: translateX(0);
+    }
+  }
+
+  &_notification {
+    .webfont-regular();
+
+    position: absolute;
+    transform: translateX( -285px );
+    z-index: 10;
+
+    border: 1px solid @green;
+    padding: @grid_gutter-width / 2;
+    width: 250px;
+
+    background-color: @green-tint;
+    overflow: hidden;
+  }
+}

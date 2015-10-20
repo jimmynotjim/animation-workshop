@@ -36,6 +36,25 @@ gulp.task( 'styles:modern', function() {
     } ) );
 } );
 
+gulp.task( 'styles:partials', function() {
+  return gulp.src( config.cwd + config.partials )
+    .pipe( $.sourcemaps.init() )
+    .pipe( $.less( config.settings ) )
+    .on( 'error', handleErrors )
+    .pipe( $.autoprefixer( {
+      browsers: [ 'last 2 version' ]
+    } ) )
+    .pipe( $.header( banner, { pkg: pkg } ) )
+    .pipe( $.rename( {
+      suffix: ".min"
+    } ) )
+    .pipe( $.sourcemaps.write( '.' ) )
+    .pipe( gulp.dest( config.dest ) )
+    .pipe( browserSync.reload( {
+      stream: true
+    } ) );
+} );
+
 gulp.task( 'styles:ie', function() {
   return gulp.src( config.cwd + config.src )
     .pipe( $.less( config.settings ) )
@@ -67,5 +86,6 @@ gulp.task( 'styles:ie', function() {
 
 gulp.task( 'styles', [
   'styles:modern',
+  'styles:partials',
   'styles:ie'
 ] );

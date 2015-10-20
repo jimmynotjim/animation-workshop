@@ -22,8 +22,7 @@
 // Import the Capital Framework enhancements
 @import (less) "cf-enhancements.less";
 
-// We've generated some sample rules for you. They're used with the index.html file.
-// Please delete them before starting your project.
+@import (less) "slides.less";
 
 @import (less) "animations.less";
 
@@ -32,6 +31,35 @@
     margin-bottom: initial;
 
     list-style: none;
+}
+
+.site_header {
+    .u-clearfix();
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: table;
+    width: 100%;
+}
+
+.site_heading {
+    .h2();
+
+    margin-bottom: initial;
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.site_logo {
+    display: table-cell;
+    vertical-align: middle;
+    width: 50%;
+    text-align: right;
+}
+
+.content_bar {
+    height: 4px;
 }
 
 .intro-message {
@@ -72,7 +100,7 @@
 
         &:checked + label + .dropdown_list__css {
             border: 1px solid @gray-20;
-            max-height: 150px;
+            height: auto;
         }
     }
 
@@ -116,7 +144,7 @@
     }
 
     &_list__css {
-        max-height: 0px;
+        height: 0;
     }
 
     &_item {
